@@ -1,0 +1,12 @@
+{
+  "name": "gcf-ryder",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "npx --yes vercel dev",
+    "preview": "python3 -m http.server 3000"
+  }
+}

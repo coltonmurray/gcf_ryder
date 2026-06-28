@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c2f22" />
+    <title>Golf Outing Availability</title>
+    <meta name="description" content="Private golf outing availability form for summer weekends." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero-section">
+        <div class="club-mark" aria-hidden="true"><span>GC</span></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Private summer golf outing · Copley, Ohio</p>
+          <h1 id="eventTitle">The Copley Invitational</h1>
+          <p class="hero-description">
+            The likely format is a two-team Ryder Cup style event for the Copley guys and friends. Submit your best summer weekends and rough scoring range so we can lock the cleanest date and build balanced teams.
+          </p>
+        </div>
+      </section>
+
+      <aside class="testing-panel" id="testingPanel" aria-label="Testing controls" hidden>
+        <div>
+          <p class="panel-kicker">Testing mode</p>
+          <strong>Name options</strong>
+        </div>
+        <label>
+          Name prototype
+          <select id="nameSelect"></select>
+        </label>
+        <p id="nameDetail">Clean, timeless, and closest to a real private-club event.</p>
+      </aside>
+
+      <form class="registration-card" id="registrationForm">
+        <div class="card-heading">
+          <p class="eyebrow">Player card</p>
+          <h2>Send your availability</h2>
+          <p>Mark every weekend as out, available, or preferred.</p>
+        </div>
+
+        <section class="form-section identity-grid" aria-label="Contact information">
+          <label class="field">
+            Name
+            <input id="playerName" name="name" placeholder="Full name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            Email
+            <input id="playerEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </label>
+        </section>
+
+        <section class="form-section score-card" aria-label="Scoring range">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Handicap proxy</p>
+              <h3>Typical 18-hole scoring range</h3>
+            </div>
+            <strong id="scoreSummary">86–96</strong>
+          </div>
+          <div class="slider-stack">
+            <label>
+              Low end: <span id="scoreLowLabel">86</span>
+              <input id="scoreLow" type="range" min="68" max="125" value="86" />
+            </label>
+            <label>
+              High end: <span id="scoreHighLabel">96</span>
+              <input id="scoreHigh" type="range" min="68" max="125" value="96" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section availability-section" aria-label="Weekend availability">
+          <div class="section-title-row availability-heading">
+            <div>
+              <p class="eyebrow">Availability</p>
+              <h3 id="availabilityYear">2026 summer weekends</h3>
+              <p id="availabilityStats">0/9 marked · 0 preferred · 0 available</p>
+            </div>
+            <div class="quick-actions" aria-label="Bulk availability actions">
+              <button type="button" data-bulk="available">All available</button>
+              <button type="button" data-bulk="unavailable">All out</button>
+              <button type="button" data-bulk="clear">Clear</button>
+            </div>
+          </div>
+
+          <div class="weekend-grid" id="weekendGrid"></div>
+        </section>
+
+        <section class="form-section suggestion-section" aria-label="Planning suggestions">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Optional</p>
+              <h3>Suggestions</h3>
+              <p>Boulder Creek in Streetsboro is a likely venue. If you have another course idea, format preference, pairing request, or anything else we should consider, drop it here.</p>
+            </div>
+          </div>
+          <label class="field">
+            Notes
+            <textarea id="planningSuggestion" name="planningSuggestion" rows="5" maxlength="1200" placeholder="Example: Sleepy Hollow would be sick, or Saturday/Sunday works better than Friday/Saturday."></textarea>
+          </label>
+        </section>
+
+        <footer class="submit-row">
+          <div>
+            <strong id="readinessTitle">Finish marking weekends</strong>
+            <p id="readinessDetail">At least one weekend needs to be available or preferred.</p>
+          </div>
+          <button class="submit-button" id="submitButton" type="submit">Submit availability</button>
+        </footer>
+
+        <p class="submit-message" id="submitMessage" role="status" hidden></p>
+      </form>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
