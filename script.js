@@ -6,8 +6,8 @@ const SCORE_MAX = 125;
 const nameOptions = [
   {
     id: "copley-invitational",
-    name: "The Copley Invitational",
-    detail: "Clean, timeless, and closest to a real private-club event."
+    name: "The Copley Cup",
+    detail: "Clean, timeless, and closest to the Ryder Cup style format."
   },
   {
     id: "summit-cup",

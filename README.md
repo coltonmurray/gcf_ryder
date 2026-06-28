@@ -28,7 +28,7 @@ npm run dev
 
 The public page does not show testing controls. Add `?test=1` to reveal event-name prototypes.
 
-Current name prototypes include The Copley Invitational, The Summit Cup, The 330 Classic, The Crosstown Invitational, and The Portage Path Classic.
+Current name prototypes include The Copley Cup, The Summit Cup, The 330 Classic, The Crosstown Invitational, and The Portage Path Classic.
 
 To change the default public name, edit `DEFAULT_NAME_ID` in `script.js`.
 
