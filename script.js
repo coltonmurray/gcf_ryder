@@ -323,7 +323,7 @@ async function submitForm(event) {
       throw new Error(result.error || "Could not save your response. Please try again.");
     }
 
-    showMessage("success", result.message || "You're in. Your availability was recorded privately.");
+    showMessage("success", "You're in.");
   } catch (error) {
     showMessage("error", error.message || "Could not save your response. Please try again.");
   } finally {

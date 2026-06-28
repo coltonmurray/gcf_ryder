@@ -130,14 +130,14 @@ module.exports = async function handler(req, res) {
       return json(res, 500, { error: "Could not save response. Please try again." });
     }
 
-    return json(res, 200, { message: "You're in. Your availability was recorded privately." });
+    return json(res, 200, { message: "You're in." });
   }
 
   if (process.env.NODE_ENV !== "production") {
     const directory = path.join(process.cwd(), ".local-submissions");
     await mkdir(directory, { recursive: true });
     await appendFile(path.join(directory, "rsvps.jsonl"), `${JSON.stringify(record)}\n`, "utf8");
-    return json(res, 200, { message: "Saved locally for development. Configure Supabase before deploying." });
+    return json(res, 200, { message: "You're in." });
   }
 
   return json(res, 503, {
